@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCbrBlack"
+    tools:context="com.example.cbrapp.BookingActivity">
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:sv_animationType="None"
+        app:sv_stepPadding="12dp"
+        app:sv_selectedCircleColor="@color/colorCbrYellow"
+        app:sv_selectedStepNumberColor="@color/colorCbrBlack"
+        app:sv_selectedTextColor="@color/colorCbrYellow"
+        app:sv_doneCircleColor="@color/colorAccent"
+        app:sv_doneStepLineColor="@color/colorAccent"
+        app:sv_doneTextColor="@color/colorWhite"
+        app:sv_doneStepMarkColor="@android:color/white"/>
+    
+    <com.example.cbrapp.Common.NonSwipePager
+        android:id="@+id/view_pager"
+        android:layout_below="@id/step_view"
+        android:layout_above="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/previous_step_btn"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            android:textColor="@color/colorCbrYellow"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp" />
+
+        <Button
+            android:id="@+id/next_step_btn"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:enabled="false"
+            android:textColor="@color/colorCbrYellow"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
